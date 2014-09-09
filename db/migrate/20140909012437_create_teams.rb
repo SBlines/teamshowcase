@@ -1,5 +1,5 @@
 class CreateTeams < ActiveRecord::Migration
-	
+
   def up
     create_table :teams do |t|
    		t.integer "trainer_id"
@@ -7,6 +7,8 @@ class CreateTeams < ActiveRecord::Migration
     	t.string "name"
     	t.string "style"
     	t.text "strategy"
+    	t.string "permalink"
+      # Need six Mons
 
       t.timestamps
     end
