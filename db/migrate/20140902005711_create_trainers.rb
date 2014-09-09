@@ -3,7 +3,7 @@ class CreateTrainers < ActiveRecord::Migration
   def up
     create_table :trainers do |t|
     	# t.column "name", :string
-    	t.string "name"
+    	t.string "name", :limit => 20
     	t.string "email", :default => "", :null => false
 
     	# t.datetime "created_at"
