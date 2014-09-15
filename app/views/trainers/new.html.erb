@@ -1,0 +1,19 @@
+<% content_for :title do %>
+New Trainer
+<% end %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create New Trainer</title>
+	</head>
+	<body>
+
+		<%= simple_form_for @trainer do |f| %>
+            <%= f.input :name, label: 'Trainer Name' %>
+            <%= f.input :email, error_html: {id: 'pw_error'} %>
+            <%= f.button :submit %>
+        <% end %>
+
+	</body>
+</html>

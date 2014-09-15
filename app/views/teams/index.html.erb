@@ -3,3 +3,13 @@
 <br>
 <br>
 <p>This will be a list of the teams, along with Trainer name</p>
+<p>and links</p>
+
+<table>
+<% @teams.each do |team| %>
+  <tr>
+    <td><%= team.name %></td>
+    <!-- Trainer name -->
+  </tr>
+<% end %>
+</table>

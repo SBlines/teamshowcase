@@ -1,6 +1,7 @@
 class TeamsController < ApplicationController
   
 	def index
+		@teams = Team.all
 		render(:template => 'teams/index')
 		#render('index')
 	end
@@ -39,7 +40,7 @@ class TeamsController < ApplicationController
 
 	def show
 		@trainer = Trainer.find(params[:trainer_id])
-		@order = Order.find(params[:id])
+		@team = Team.find(params[:id])
 	end
 
 end
