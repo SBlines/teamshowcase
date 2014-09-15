@@ -1,0 +1,20 @@
+<% content_for :title do %>
+New Team
+<% end %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create New Team</title>
+	</head>
+	<body>
+
+		<%= simple_form_for [@trainer, @team] do |f| %>
+            <%= f.input :name %>
+            <%= f.input :style %>
+            <%= f.input :strategy %>
+            <%= f.button :submit %>
+        <% end %>
+
+	</body>
+</html>

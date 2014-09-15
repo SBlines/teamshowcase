@@ -1,7 +1,14 @@
 Teamshowcase::Application.routes.draw do
+  get "teams/index"
   root :to => "c1#index"
 
   get "c1/index"
+
+  resources :trainers do
+    resources :teams do
+      resources :mons
+    end
+  end
   #Following route goes to bottom of page
   match ':controller(/:action(/:id(.:format)))', :via => :get
 
