@@ -6,10 +6,13 @@
 <p>and links</p>
 
 <table>
-<% @teams.each do |team| %>
-  <tr>
-    <td><%= team.name %></td>
-    <!-- Trainer name -->
-  </tr>
-<% end %>
+
+	<% if @teams %>
+		<% @teams.each do |team| %>
+  			<tr>
+    		<td><%= team.name %></td>
+    		<!-- Trainer name -->
+  			</tr>
+		<% end %>
+	<% end %>
 </table>

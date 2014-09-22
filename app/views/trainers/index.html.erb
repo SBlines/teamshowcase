@@ -1,2 +1,18 @@
-<h1>Trainers#index</h1>
-<p>Find me in app/views/trainers/index.html.erb</p>
+<h1>Trainer#index</h1>
+<p>Find me in app/views/trainer/index.html.erb</p>
+<br>
+<br>
+<p>This will be a list of the Trainers and emails</p>
+<p>and links</p>
+
+<table>
+
+	<% if @trainers %>
+		<% @trainers.each do |trainer| %>
+  			<tr>
+    		<td><%= trainer.name %></td>
+    		<td><%= trainer.email %></td>
+  			</tr>
+		<% end %>
+	<% end %>
+</table>
