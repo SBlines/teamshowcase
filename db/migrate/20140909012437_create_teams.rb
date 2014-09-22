@@ -14,7 +14,7 @@ class CreateTeams < ActiveRecord::Migration
     end
 
     add_index("teams", "trainer_id")
-    add_index("pages", "permalink")
+    # add_index("pages", "permalink")
   end
 
   def down

@@ -1,4 +1,5 @@
 Teamshowcase::Application.routes.draw do
+  devise_for :trainers
   get "trainers/index"
   get "teams/index"
   root :to => "c1#index"
